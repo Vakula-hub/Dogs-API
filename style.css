@@ -1,0 +1,156 @@
+body {
+  font-family: "Bebas Neue", "Arial", cursive;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#grid {
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  column-gap: 20px;
+  row-gap: 20px;
+  box-sizing: border-box;
+  width: 1500px;
+  height: 1200px;
+  padding: 20px;
+  margin: 20px auto;
+  background-image: url("./Kostochka.jpg");
+  border: 1px solid darkgrey;
+  border-radius: 20px;
+}
+
+.picture {
+  background: white;
+  border: 1px solid black;
+  border-radius: 20px;
+  overflow: hidden;
+  opacity: 0.85;
+  transition: 0.5s linear opacity;
+}
+.picture:hover {
+  opacity: 1;
+  z-index: 3;
+}
+.picture > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  transform: scale(0.95);
+  transition: 0.5s linear transform;
+  z-index: 3;
+}
+.picture:hover > img {
+  transform: scale(1.2);
+}
+.picture:first-child {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 6;
+}
+.picture:nth-child(2) {
+  grid-column-start: 6;
+  grid-column-end: 13;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.picture:nth-child(3) {
+  grid-column-start: 13;
+  grid-column-end: 16;
+  grid-row-start: 1;
+  grid-row-end: 4;
+}
+.picture:nth-child(4) {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 6;
+  grid-row-end: 9;
+}
+.picture:nth-child(5) {
+  grid-column-start: 6;
+  grid-column-end: 11;
+  grid-row-start: 4;
+  grid-row-end: 10;
+}
+.picture:nth-child(6) {
+  grid-column-start: 11;
+  grid-column-end: 16;
+  grid-row-start: 4;
+  grid-row-end: 7;
+}
+.picture:nth-child(7) {
+  grid-column-start: 11;
+  grid-column-end: 16;
+  grid-row-start: 7;
+  grid-row-end: 10;
+}
+.picture:nth-child(8) {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 9;
+  grid-row-end: 13;
+}
+.picture:nth-child(9) {
+  grid-column-start: 6;
+  grid-column-end: 10;
+  grid-row-start: 10;
+  grid-row-end: 13;
+}
+.picture:last-child {
+  grid-column-start: 10;
+  grid-column-end: 16;
+  grid-row-start: 10;
+  grid-row-end: 13;
+}
+#send {
+  width: 200px;
+  height: 50px;
+  margin-left: 1300px;
+  font-size: 32px;
+  background: darkseagreen;
+  color: gold;
+  border-radius: 20%;
+}
+#loader {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/**/
+
+.spinner {
+  width: 20em;
+  height: 20em;
+  border-top: 1em solid #830610;
+  border-right: 1em solid transparent;
+  animation: spinner 0.4s linear infinite;
+  border-radius: 50%;
+}
+.head {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin-left: 8.5em;
+  margin-top: 0.5em;
+  background-color: #d5fff7;
+}
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hide {
+  opacity: 0;
+}
